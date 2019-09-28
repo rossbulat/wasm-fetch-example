@@ -13,7 +13,7 @@ crate-type = ["cdylib", "rlib"]
 default = ["console_error_panic_hook"]
 
 [dependencies]
-futures = "0.1.20"
+futures = { version = "0.1.26", default-features = false }
 wasm-bindgen = { version = "0.2.50", features = ["serde-serialize"]  }
 js-sys = "0.3.27"
 wasm-bindgen-futures = "0.3.27"
@@ -24,7 +24,8 @@ serde_derive = "^1.0.59"
 # logging them with `console.error`. This is great for development, but requires
 # all the `std::fmt` and `std::panicking` infrastructure, so isn't great for
 # code size when deploying.
-console_error_panic_hook = { version = "0.1.1", optional = true }
+# originally version 0.1.1
+console_error_panic_hook = { version = "0.1.6", optional = true }
 
 # `wee_alloc` is a tiny allocator for wasm that is only ~1K in code size
 # compared to the default allocator's ~10K. It is slower than the default

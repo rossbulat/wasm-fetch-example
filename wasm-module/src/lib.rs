@@ -6,8 +6,7 @@ use futures::{future, Future};
 use js_sys::Promise;
 use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsCast;
-use wasm_bindgen_futures::future_to_promise;
-use wasm_bindgen_futures::JsFuture;
+use wasm_bindgen_futures::{JsFuture, future_to_promise};
 use web_sys::{Request, RequestInit, RequestMode, Response};
 
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
